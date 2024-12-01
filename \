@@ -1,0 +1,23 @@
+public class PowerOfTwo
+{
+	public static boolean isPowerOfTwoLoop(int n)
+	{
+		if(n/2==1||n==1) return true;
+		else if(n%2!=0) return false;
+		else  return isPowerOfTwo(n/2);
+	}
+
+	public static boolean isPowerOfTwo(int n)
+	{
+		double exponent = Math.log(n)/Math.log(2);
+		if(exponent%1 == 0) return true;
+		else return false;
+	}
+
+	public static void main(String[] args)
+	{
+		System.out.println(isPowerOfTwoLoop(1));
+		System.out.println(isPowerOfTwo(1));
+	}
+}
+
